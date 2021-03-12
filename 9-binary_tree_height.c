@@ -17,16 +17,16 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	}
 	else
 	{
-		heightL = binary_tree_height(tree->left);
-		heightR = binary_tree_height(tree->right);
+		heightL = binary_tree_height(tree->left) + 1;
+		heightR = binary_tree_height(tree->right) + 1;
 
 		if (heightL > heightR)
 		{
-			return (heightL + 1);
+			return (heightL);
 		}
 		else
 		{
-			return (heightR + 1);
+			return (heightR);
 		}
 	}
 }
